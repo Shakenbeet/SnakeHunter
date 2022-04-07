@@ -29,7 +29,8 @@ public class Bullet {
     {
         y -= speed;
 
-        // SCUFFED COLLISION SYSTEM, PLEASE HELP ME
+        // This collision system is very barebones, but if it ain't broke don't fix it.
+        // My one recommendation is to move this detection to the Enemy character, it will boost performance
         if (x + texture.getWidth() > enemy.getX() && x < enemy.getX() + enemy.texture.getWidth() && y + texture.getHeight() > enemy.getY() && y < enemy.getY() + enemy.texture.getHeight())
         {
             if (!dead)
